@@ -1,0 +1,33 @@
+.swap-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  border: 4px solid #111827;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.swap-button:hover:not(.disabled) {
+  transform: rotate(180deg);
+  background: linear-gradient(135deg, #a78bfa, #818cf8);
+}
+
+.swap-button:active:not(.disabled) {
+  transform: rotate(180deg) scale(0.95);
+}
+
+.swap-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.swap-button svg {
+  transition: transform 0.2s ease;
+}
